@@ -6,7 +6,7 @@ import Todos from "./pages/Todos";
 
 function App() {
   return (
-    <BrowserRouter basename="/react-Todo-app">
+    <BrowserRouter basename="/react-Todo-app_Redux">
       <Navbar/>
       <div className="container pt-4">
         <Switch>
