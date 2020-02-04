@@ -20,17 +20,17 @@
               The Redux implementation of this app placed here: https://github.com/Gogn/react-Todo-app
               <details>
                 <summary>Project tree</summary>
-                <p className='mb-0'>.</p>
-                <p className='mb-0'>├── App.js</p>
-                <p className='mb-0'>├── components</p>
-                <p className='mb-0'>│ ├── navbar.js</p>
-                <p className='mb-0'>│ └── todo.js</p>
-                <p className='mb-0'>├── index.css</p>
-                <p className='mb-0'>├── index.js</p>
-                <p className='mb-0'>├── pages</p>
-                <p className='mb-0'>│ ├── Home.js</p>
-                <p className='mb-0'>│ └── Todos.js</p>
-                <p className='mb-0'>└── serviceWorker.js</p>
+                .
+                ├── App.js
+                ├── components
+                │ ├── navbar.js
+                │ └── todo.js
+                ├── index.css
+                ├── index.js
+                ├── pages
+                │ ├── Home.js
+                │ └── Todos.js
+                └── serviceWorker.js
               </details>
               <p><strong>Todos.js</strong> have a <i>local state</i> that have a array of objects.</p>
               <p><strong>Todos.js</strong> include list of todos from <strong>components/todo.js</strong> by mapping
