@@ -15,7 +15,7 @@
               to the link on the top right corner on navbar.</p>
             <hr/>
             <details>
-              <summary><h5>The Local state</h5></summary>
+              <summary><h5>The Local state</h5> </summary>
               The Redux implementation of this app placed here: https://github.com/Gogn/react-Todo-app
               <details>
                 <summary>Project tree</summary>
