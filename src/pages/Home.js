@@ -70,7 +70,7 @@ export const Home = () => {
             </details>
 
             <hr/>
-            <details>
+
               <summary><h5>Manegement state via Redux</h5></summary>
               The Redux implementation of this app placed here: https://github.com/Gogn/react-Todo-app_Redux
 
@@ -160,7 +160,7 @@ export const Home = () => {
               <p><strong>Todo.js</strong> gets props and functions from the reducer using the <i>connect</i> function
                 from <i>react-redux</i> library.</p>
               <p>So we have centralized state for whole app.</p>
-            </details>
+            
 
             <hr/>
             <details>

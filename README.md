@@ -1,5 +1,6 @@
 <article>
-          <h1>This is react app example that using Redux to manipulate data.</h5>
+          <h2>This is react app example that using Redux to manipulate data.</h2>
+          <h5>Demo: https://gogn.github.io/react-Todo-app_Redux/</h5>
           <h4>How it works?</h4>
           <article>
             <p className='mt-2'>First of all, the main page is <strong>index.html</strong>. They have
@@ -56,7 +57,6 @@
               </p>
             </details>
             <hr/>
-            <details>
               <summary><h5>Manegement state via Redux</h5></summary>
               The Redux implementation of this app placed here: https://github.com/Gogn/react-Todo-app_Redux
               <details>
@@ -144,7 +144,6 @@
               <p><strong>Todo.js</strong> gets props and functions from the reducer using the <i>connect</i> function
                 from <i>react-redux</i> library.</p>
               <p>So we have centralized state for whole app.</p>
-            </details>
             <hr/>
             <details>
               <summary><h5>Use hooks</h5></summary>
