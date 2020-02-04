@@ -1,16 +1,14 @@
 import React, {Component} from 'react'
 import Todo from "../components/todo";
+import {add, done, remove} from "../store/Actions/actions";
+import {connect} from "react-redux";
 
-export default class Todos extends Component {
+class Todos extends Component {
 
   state = {
-    todos: [
-      {name: 'First', done: false, id: 0},
-      {name: 'Second', done: false, id: 1},
-      {name: 'Third', done: false, id: 2},
-    ],
-    todoNew: {name: '', done: false}
+    todoNew: {}
   }
+
 
   addTodoHandler = (event) => {
     this.setState({
@@ -18,27 +16,9 @@ export default class Todos extends Component {
     })
   }
 
-  addTodo = (event) => {
-    event.preventDefault()
-    this.setState({todos: [...this.state.todos, this.state.todoNew]})
-  }
-
-  doneTodo = (id) => {
-    this.setState({
-      new_todos: this.state.todos.map(todo => {
-        if (todo.id === id) {
-          todo.done = !todo.done
-        }
-        return todo
-      })
-    })
-  }
-
-  deleteTodo = (id) => {
-    const new_todos = this.state.todos.concat()
-    new_todos.splice(id, 1)
-    console.log(new_todos)
-    this.setState({todos: new_todos})
+  onSubmit = (event) => {
+    event.preventDefault();
+    this.props.onAdd(this.state.todoNew)
   }
 
   render() {
@@ -53,19 +33,19 @@ export default class Todos extends Component {
         <div className='row justify-content-center'>
           <div className="col-8">
             <ul className="list-group mb-4">
-              {this.state.todos.map((todo, id) => (
+              {this.props.todos.map((todo, id) => (
                 <Todo
                   todo={todo}
                   key={id}
-                  doneTodo={this.doneTodo}
-                  deleteTodo={event => this.deleteTodo(id)}
+                  onDone={this.props.onDone}
+                  onDelete={this.props.onDelete}
                 />
               ))}
             </ul>
           </div>
         </div>
 
-        <form className='row justify-content-center' onSubmit={this.addTodo}>
+        <form className='row justify-content-center' onSubmit={this.onSubmit}>
             <div className="col-10 input-group mb-3">
               <input
                 type="text"
@@ -77,7 +57,6 @@ export default class Todos extends Component {
                 <button
                   className="btn btn-outline-success"
                   type="submit"
-                  onChange={this.addTodo}
                 >Add todo
                 </button>
               </div>
@@ -87,3 +66,19 @@ export default class Todos extends Component {
     )
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    todos: state.todoReducer.todos
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    onAdd: todoNew => dispatch(add(todoNew)),
+    onDelete: id => dispatch(remove(id)),
+    onDone: id => dispatch(done(id))
+    }
+  }
+
+export default connect(mapStateToProps, mapDispatchToProps)(Todos)

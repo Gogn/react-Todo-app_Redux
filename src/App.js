@@ -12,6 +12,7 @@ function App() {
         <Switch>
           <Route path='/' exact component={Home}/>
           <Route path='/todo' component={Todos}/>
+          {/*<Route path='/todo' render={() => {return <Todos todos={this.props.todos}/>}} />*/}
         </Switch>
       </div>
     </BrowserRouter>

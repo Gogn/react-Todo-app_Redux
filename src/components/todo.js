@@ -10,30 +10,34 @@ export default class Todo extends Component {
 
   render() {
     return (
+
       <li className="list-group-item">
-        <div style={this.styles()}>
-          <div className="input-group">
+        <div className="input-group">
           <div className="input-group-prepend">
             <div className="input-group-text">
               <input
                 type="checkbox"
                 checked={this.props.todo.done}
-                onClick={() => this.props.doneTodo(this.props.todo.id)}
+                onChange={() => this.props.onDone(this.props.todo.id)}
               />
             </div>
           </div>
+          <div className='flex-grow-1' style={this.styles()}>
             <span
               type="text"
               className="form-control"
-              onClick={() => this.props.doneTodo(this.props.todo.id)} >{this.props.todo.name}
+              onClick={() => this.props.onDone(this.props.todo.id)}
+            >{this.props.todo.name}
             </span>
-            <button
-              className='btn btn-danger'
-              onClick={() => this.props.deleteTodo(this.props.todo.id)}
-            >X</button>
           </div>
+          <button
+            className='btn btn-danger'
+            onClick={() => this.props.onDelete(this.props.todo.id)}
+          >X
+          </button>
         </div>
       </li>
+
     )
   }
 }
