@@ -3,7 +3,7 @@
           <h4>How it works?</h4>
           <article>
             <p className='mt-2'>First of all, the main page is <strong>index.html</strong>. They have
-              a {text('<div id=”root”></div>')} </p>
+              a div id=”root”</p>
             <p>A rendered JSX from <strong>index.js</strong> will be inserted to this
               block. <strong>index.js</strong> includes code from <strong>App.js</strong> component.</p>
             <p><strong>App.js</strong> uses <i>react-router-dom</i> that uses <i>React Router</i> to bind DOM.</p>
@@ -15,7 +15,7 @@
               to the link on the top right corner on navbar.</p>
             <hr/>
             <details>
-              <summary><h5>The Local state</h5></summary>
+              <summary><h5>The Local state</h5> </summary>
               The Redux implementation of this app placed here: https://github.com/Gogn/react-Todo-app
               <details>
                 <summary>Project tree</summary>
@@ -33,10 +33,10 @@
               </details>
               <p><strong>Todos.js</strong> have a <i>local state</i> that have a array of objects.</p>
               <p><strong>Todos.js</strong> include list of todos from <strong>components/todo.js</strong> by mapping
-                state.todos: {text('this.state.todos.map((todo, id) => ( ... )')},
+                state.todos: this.state.todos.map((todo, id) => ( ... ),
                 so every todo object from state.todos array will be shown from <strong>components/todo.js </strong>
                 with
-                parameters: {text('todo={todo}, key={id}, doneTodo={this.doneTodo}, deleteTodo={event => this.deleteTodo(id)}')}
+                parameters: 'todo={todo}, key={id}, doneTodo={this.doneTodo}, deleteTodo={event => this.deleteTodo(id)}'
               </p>
               <ul>
                 <li><i>todo</i> - is the current state.todos[] object from <i>map</i> method</li>
@@ -91,7 +91,7 @@
               <p>This app uses <i>Redux</i> library along with <i>react-redux</i> that lets easily bind components
                 with <i>Redux</i> store.</p>
               <p><i>Redux/react-redux</i> connect to the app in a
-                file <strong>index.js</strong>. {text('const store = createStore(rootReducer)')}
+                file <strong>index.js</strong>. 'const store = createStore(rootReducer)'
                 tell that <strong>store/Reducers/rootReducer.js</strong> is the main reducer of the app.</p>
               <p><strong>rootReducer</strong> connect all reducers used in the app. In this app we have only one reducer
                 so <strong>rootReducer</strong> export only
@@ -116,12 +116,12 @@
               <p><strong>Todos.js</strong> have a <i>local state</i> that have only a todoNew object that can be update
                 thru <i>addTodoHandler</i> and passed to the todoReducer</p>
               <p><strong>Todos.js</strong> include list of todos from <strong>components/todo.js</strong> by mapping
-                state.todos from <strong>todoReducer.js</strong>: {text('this.props.todos.map((todo, id) => ( ... )')}
+                state.todos from <strong>todoReducer.js</strong>: 'this.props.todos.map((todo, id) => ( ... )'
               </p>
               <p>The <i>todos</i> get into props via <i>mapStateToProps</i>.</p>
               <p>So every todo object from props.todos will be shown from <strong>components/todo.js </strong>
                 with
-                parameters: {text('todo={todo}, key={id}, onDone={this.props.onDone}, onDelete={this.props.onDelete}')}
+                parameters: 'todo={todo}, key={id}, onDone={this.props.onDone}, onDelete={this.props.onDelete}'
               </p>
               <ul>
                 <li><i>todo</i> - is the current state.todos[] object from <i>map</i> method</li>
