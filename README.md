@@ -29,8 +29,7 @@
                 ├── index.js
                 ├── pages
                 │ ├── Home.js
-                │ └── Todos.js
-                └── serviceWorker.js
+                  └── Todos.js
               </details>
               <p><strong>Todos.js</strong> have a <i>local state</i> that have a array of objects.</p>
               <p><strong>Todos.js</strong> include list of todos from <strong>components/todo.js</strong> by mapping
@@ -71,7 +70,6 @@
                 <p className='mb-0'>├── pages</p>
                 <p className='mb-0'>│ ├── Home.js</p>
                 <p className='mb-0'>│ └── Todos.js</p>
-                <p className='mb-0'>├── serviceWorker.js</p>
                 <p className='mb-0'>└── store</p>
                 <p className='mb-0'> ├── Actions</p>
                 <p className='mb-0'> │ ├── actions.js</p>
